@@ -17,6 +17,13 @@ This is a simple quiz application built using **HTML**, **CSS**, **JavaScript**,
 - **JavaScript**: Logic for loading questions, checking answers, and tracking the score.
 - **Bootstrap**: Framework for responsive design and styling.
 - **CSV**: Used to store the quiz questions in a structured format.
+- 
+![Screenshot 2024-12-26 223112](https://github.com/user-attachments/assets/9bfde0a2-4c06-416d-b622-31e6ab1cb868)
+
+
+![Screenshot 2024-12-26 223137](https://github.com/user-attachments/assets/09ebb9fc-9b7a-44d7-8464-b60741121151)
+
+
 
 ## 🚀 How to Use
 
@@ -44,8 +51,8 @@ The questions are stored in a CSV file. To add new questions:
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/Sonucs12/quiz-app)
-- [Portfolio Website](#)
-- [LinkedIn Profile](#)
+- [Portfolio Website]((https://sonucs-portfolio.netlify.app/))
+- [LinkedIn Profile]([#](https://www.linkedin.com/in/sonu-kumar-15b6b3239/))
 - [YouTube Channel - CodingSuno](#)
 
 
