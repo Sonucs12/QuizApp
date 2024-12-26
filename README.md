@@ -51,9 +51,9 @@ The questions are stored in a CSV file. To add new questions:
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/Sonucs12/quiz-app)
-- [Portfolio Website]((https://sonucs-portfolio.netlify.app/))
-- [LinkedIn Profile]([#](https://www.linkedin.com/in/sonu-kumar-15b6b3239/))
-- [YouTube Channel - CodingSuno](#)
+- [Portfolio Website](https://sonucs-portfolio.netlify.app/)
+- [LinkedIn Profile](https://www.linkedin.com/in/sonu-kumar-15b6b3239/)
+
 
 
 ## 📄 License
