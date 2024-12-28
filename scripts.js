@@ -146,7 +146,10 @@ function startExamMode() {
 
     startTimer();
   } else {
-    showAlert("Questions are not loaded yet. Cannot start Exam Mode.", "danger");
+    showAlert(
+      "Questions are not loaded yet. Cannot start Exam Mode.",
+      "danger"
+    );
   }
 }
 
@@ -185,7 +188,6 @@ function resetQuizState() {
   stopTimer();
   loadQuestion();
 }
-
 
 // Load Question Function
 function loadQuestion() {
@@ -790,42 +792,42 @@ document.addEventListener("DOMContentLoaded", function () {
       .addEventListener("click", navigateToAttemptQuiz);
   }
 
-  if(page === "feedback"){
-   
-      const stars = document.querySelectorAll('.rating-star');
-      let selectedRating = 0;
-    
-      // Star Rating Logic
-      stars.forEach((star) => {
-        star.addEventListener('click', () => {
-          selectedRating = star.getAttribute('data-value');
-          stars.forEach((s, index) => {
-            s.classList.toggle('active', index < selectedRating);
-          });
+  if (page === "feedback") {
+    const stars = document.querySelectorAll(".rating-star");
+    let selectedRating = 0;
+
+    // Star Rating Logic
+    stars.forEach((star) => {
+      star.addEventListener("click", () => {
+        selectedRating = star.getAttribute("data-value");
+        stars.forEach((s, index) => {
+          s.classList.toggle("active", index < selectedRating);
         });
       });
-    
-      // Submit Feedback Logic
-      document.getElementById('submitFeedback').addEventListener('click', () => {
-        const errorReported = document.getElementById('errorSelect').value;
-        const improvementSuggestions = document.getElementById('improvement').value;
-    
-        if (!selectedRating) {
-          alert('Please select a rating before submitting feedback.');
-          return;
-        }
-    
-        const emailBody = `
+    });
+
+    // Submit Feedback Logic
+    document.getElementById("submitFeedback").addEventListener("click", () => {
+      const errorReported = document.getElementById("errorSelect").value;
+      const improvementSuggestions =
+        document.getElementById("improvement").value;
+
+      if (!selectedRating) {
+        alert("Please select a rating before submitting feedback.");
+        return;
+      }
+
+      const emailBody = `
           Feedback from Quiz App User:
           - Error Encountered: ${errorReported}
           - Rating: ${selectedRating} stars
-          - Suggestions: ${improvementSuggestions || 'No suggestions provided'}
+          - Suggestions: ${improvementSuggestions || "No suggestions provided"}
         `;
-    
-        // Open mail client
-        window.location.href = `mailto:onlysonuk2@gmail.com?subject=Quiz App Feedback&body=${encodeURIComponent(emailBody)}`;
-      });
-  
-    
+
+      // Open mail client
+      window.location.href = `mailto:onlysonuk2@gmail.com?subject=Quiz App Feedback&body=${encodeURIComponent(
+        emailBody
+      )}`;
+    });
   }
 });
