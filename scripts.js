@@ -32,7 +32,22 @@ let timeTaken = 0;
 let attemptedQuestions = 0;
 let mode = "practice";
 let timerInterval;
+function showAlert(message, type) {
+  const alertContainer = document.createElement("div");
+  alertContainer.className = `alert alert-${type} alert-dismissible fade show alert-container`;
+  alertContainer.role = "alert";
+  alertContainer.innerHTML = `
+  <span>${message}</span>
+`;
+  document.body.appendChild(alertContainer);
 
+  setTimeout(() => {
+    alertContainer.classList.remove("show");
+    setTimeout(() => {
+      alertContainer.remove();
+    }, 300);
+  }, 2000);
+}
 function selectOption(selectedOption, button) {
   const currentQuestion = questions[currentQuestionIndex];
   const previousAnswer = currentQuestion.selectedAnswer;
@@ -131,7 +146,7 @@ function startExamMode() {
 
     startTimer();
   } else {
-    showAlert("Questions are not loaded yet. Cannot start Exam Mode.");
+    showAlert("Questions are not loaded yet. Cannot start Exam Mode.", "danger");
   }
 }
 
@@ -171,22 +186,7 @@ function resetQuizState() {
   loadQuestion();
 }
 
-function showAlert(message, type) {
-  const alertContainer = document.createElement("div");
-  alertContainer.className = `alert alert-${type} alert-dismissible fade show alert-container`;
-  alertContainer.role = "alert";
-  alertContainer.innerHTML = `
-  <span>${message}</span>
-`;
-  document.body.appendChild(alertContainer);
 
-  setTimeout(() => {
-    alertContainer.classList.remove("show");
-    setTimeout(() => {
-      alertContainer.remove();
-    }, 300);
-  }, 2000);
-}
 // Load Question Function
 function loadQuestion() {
   const questionElement = document.getElementById("question");
