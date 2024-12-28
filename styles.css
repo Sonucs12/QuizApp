@@ -264,9 +264,42 @@
     transition: height 0.3s ease-in-out;
   }
   
+  .rating i {
+    font-size: 2rem;
+    color: #e4e5e9;
+    cursor: pointer;
+  }
   
+  .rating i.active {
+    color: #0ab158;
+  }
   
-  
+  #submitFeedback {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .doc-section {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .doc-section h3 {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .doc-icon {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+  .feedback-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .doc-pre {
+    background: #eef1f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
   @media (max-width: 790px) {
     .container-section {
       margin: 0rem 0.5rem 2rem 0.5rem;
