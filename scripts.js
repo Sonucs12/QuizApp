@@ -557,6 +557,91 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (page === "attempt-quiz") {
+
+    // const questionContainer = document.getElementById("question-container");
+    // const questionElement = document.getElementById("question");
+    // const optionsElement = document.getElementById("options");
+    // const navigationButtons = document.querySelectorAll("#previous-btn, #next-btn");
+    // const arrowButton = document.getElementById("toggle-arrow");
+
+    // if (!questionContainer || !arrowButton) {
+    //   console.error("❌ Required elements (#question-container or #toggle-arrow) are missing from the DOM!");
+    //   return;
+    // }
+
+    // let showAll = false;
+
+    // function toggleQuestionView(mode) {
+    //   if (mode === "all") {
+    //     showAll = true;
+    //     questionContainer.innerHTML = ""; // Clear single question view
+    //     questionElement.style.display = "none"; // Hide single question view
+    //     optionsElement.style.display = "none"; // Hide single options view
+
+    //     // Display all questions
+    //     questions.forEach((q, index) => {
+    //       const questionBlock = document.createElement("div");
+    //       questionBlock.classList.add("question-block", "mb-3", "p-2");
+    //       questionBlock.innerHTML = `
+    //         <h5 class= "mb-3">Q${index + 1}: ${q.questionText}</h5>
+    //         <div>
+    //           ${q.options
+    //             .map(option => `<button class="btn btn-outline-primary w-100 mb-2 option">${option}</button>`)
+    //             .join('')}
+    //         </div>
+    //       `;
+    //       questionContainer.appendChild(questionBlock);
+    //     });
+
+    //     // Hide navigation buttons
+    //     navigationButtons.forEach(btn => btn.style.display = "none");
+    //     arrowButton.innerHTML = "↑"; // Change to up arrow
+    //   } else {
+    //     showAll = false;
+    //     questionContainer.innerHTML = ""; // Clear all questions
+    //     questionElement.style.display = "block"; // Show single question
+    //     optionsElement.style.display = "block"; // Show options
+
+    //     currentQuestionIndex = 0;
+    //     loadQuestion();
+
+    //     // Show navigation buttons
+    //     navigationButtons.forEach(btn => {
+    //       btn.style.display = "inline-block";
+    //       btn.style.float = "left";
+    //     });
+    //     arrowButton.innerHTML = "↓"; // Change to down arrow
+    //   }
+    // }
+
+    // // Event Listener for Arrow Button
+    // arrowButton.addEventListener("click", () => {
+    //   toggleQuestionView(showAll ? "one" : "all");
+    // });
+
+    // // Initial question load
+    // loadQuestion();
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const modeToggle = document.getElementById("mode-toggle");
     modeToggle.addEventListener("change", () => {
       if (modeToggle.checked) {
