@@ -753,7 +753,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("score", score);
       localStorage.setItem("attemptedQuestions", attemptedQuestions);
       localStorage.setItem("timeTaken", timeTaken);
-      window.location.href = "dashboard.html";
+      window.location.href= ("dashboard.html");
     });
     function startTimer() {
       let startTime = Date.now();
@@ -853,7 +853,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     displayResult();
     document.getElementById("re-Quiz").addEventListener("click", () => {
-      window.location.href = "attempt-quiz.html";
+      window.location.replace("attempt-quiz.html");
       attemptQuiz();
     });
 
@@ -862,14 +862,14 @@ document.addEventListener("DOMContentLoaded", function () {
       .addEventListener("click", () => {
         clearLocalStorage();
         localStorage.removeItem("questions");
-        window.location.href = "index.html";
+        window.location.replace("index.html");
       });
 
     function navigateToAttemptQuiz(event) {
       clearLocalStorage();
       localStorage.removeItem("questions");
       resetQuizState();
-      window.location.href = "attempt-quiz.html";
+      window.location.replace("attempt-quiz.html");
     }
 
     document
