@@ -308,6 +308,9 @@ body {
   }
   .home-container {
     padding: 3rem 1rem 1rem 1rem;
+   
+  }
+  .hero-section{
     height: 70vh;
   }
   .button-class {
