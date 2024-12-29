@@ -32,6 +32,7 @@ let timeTaken = 0;
 let attemptedQuestions = 0;
 let mode = "practice";
 let timerInterval;
+
 function showAlert(message, type) {
   const alertContainer = document.createElement("div");
   alertContainer.className = `alert alert-${type} alert-dismissible fade show alert-container`;
@@ -682,7 +683,13 @@ document.addEventListener("DOMContentLoaded", function () {
             button.classList.add("btn", "btn-primary");
             buttonContainer.insertBefore(button, buttonContainer.firstChild);
             button.onclick = () => {
-              document.getElementById("showQuizTitle").textContent = quiz.title;
+              let titleText = quiz.title;
+              sessionStorage.setItem("titleText", titleText);
+              const storedTitleText = sessionStorage.getItem("titleText");
+              document.getElementById("showQuizTitle").textContent =
+                storedTitleText;
+
+
               score = 0;
               localStorage.setItem("score", score);
 
@@ -749,12 +756,17 @@ document.addEventListener("DOMContentLoaded", function () {
         timeTaken = Math.floor((Date.now() - startTime) / 1000);
 
         if (timerElement) {
-          timerElement.textContent = `Time: ${timeTaken} seconds`;
+          timerElement.textContent = `Time: ${timeTaken} sec`;
         }
       }, 1000);
     }
   }
   if (page === "dashboard") {
+    const storedTitleText = sessionStorage.getItem("titleText");
+    document.getElementById("show-title-inDashboard").textContent =
+      storedTitleText;
+    document.getElementById("show-title-inDashboard").textContent =
+      storedTitleText;
     const storedQuestions = JSON.parse(localStorage.getItem("questions"));
     const storedScore = parseInt(localStorage.getItem("score"), 10) || 0;
     const storedAttemptedQuestions =
@@ -785,8 +797,8 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("total-wrong").textContent = totalWrong;
       // Display the time taken
       const timeTakenElement = document.getElementById("time-taken");
-      if (timeTakenElement) {
-        timeTakenElement.textContent = `${timeTaken} seconds`;
+      if (timeTaken > 0) {
+        timeTakenElement.textContent = `Time Taken: ${timeTaken} sec`;
       }
       const reviewContainer = document.querySelector(".review-container");
       const reviewList = document.getElementById("view-review");
@@ -834,7 +846,7 @@ document.addEventListener("DOMContentLoaded", function () {
         stopTimer();
         document.getElementById(
           "time-taken"
-        ).textContent = `${timeTaken} seconds`;
+        ).textContent = `${timeTaken} sec`;
       }
     }
     displayResult();

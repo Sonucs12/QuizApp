@@ -98,9 +98,10 @@
     <div id="dashboard" class="container-section">
       <div class="dashboard-container">
         <h2>Results Dashboard</h2>
-        <p>
-          <strong>Time Taken:</strong> <span id="time-taken">0 seconds</span>
-        </p>
+        <div class="d-flex flex-column flex-sm-row justify-content-lg-between">
+          <span id="time-taken"></span>
+          <span id="show-title-inDashboard" class=""></span>
+        </div>
 
         <hr />
         <div class="result-container flex-column flex-md-row">
@@ -116,12 +117,12 @@
           <hr />
           <div class="datacont text-bg-success">
             <p class="fw-medium">Total Correct Answers</p>
-            <span class="" id="total-correct"></span>
+            <span class="" id="total-correct">0</span>
           </div>
           <hr />
           <div class="datacont text-bg-danger">
             <p class="fw-medium">Total Wrong Answers</p>
-            <span id="total-wrong"></span>
+            <span id="total-wrong">0</span>
           </div>
         </div>
         <hr />
@@ -141,7 +142,9 @@
             aria-expanded="false"
             aria-controls="view-review"
           >
-            <span id="toggle-review" class="float-end" style="font-size: 1.5rem">+</span>
+            <span id="toggle-review" class="float-end" style="font-size: 1.5rem"
+              >+</span
+            >
           </a>
         </h4>
         <ul id="view-review" class="collapse mt-3"></ul>
