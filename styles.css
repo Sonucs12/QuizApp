@@ -141,6 +141,11 @@ body {
   justify-content: space-between;
   border-radius: 10px;
 }
+.createQuizHeading{
+  position: sticky;
+  top: 55px;
+  z-index: 1020;
+}
 .createQuizHeadingOne {
   flex-direction: column;
   justify-content: center;
