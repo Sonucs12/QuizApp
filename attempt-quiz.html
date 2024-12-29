@@ -100,7 +100,11 @@
         id="quiz-title-container"
         class="d-flex flex-col flex-wrap align-items-center justify-content-between"
       >
-        <h4>Available Quizzes</h4>
+        <h4 class="mb=0">Available Quizzes</h4><div id="loading-indicator" style="display: none;" class="float-end mb-0" >
+          <i class="fa fa-spinner fa-spin"></i>
+          Loading...
+        </div>
+        
         <div
           id="button-container"
           class="d-flex flex-wrap align-items-center gap-2"
@@ -126,10 +130,14 @@
         <hr />
         <div id="quiz-info" class="mb-3">
           <p>
+           <span id="showQuizTitle" class="fw-bolder text-primary"></span>
+          </p>
+          
+          <p>
             Total Questions Created <span id="total-questions-created">0</span>
           </p>
           <p>Questions Attempted <span id="attempted-questions">0</span></p>
-        </div>
+        </div><hr>
         <div id="question-container" class="mb-4">
           <div class="question" id="question"></div>
           <div class="options mb-4" id="options"></div>

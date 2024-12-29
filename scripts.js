@@ -557,7 +557,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (page === "attempt-quiz") {
-
     // const questionContainer = document.getElementById("question-container");
     // const questionElement = document.getElementById("question");
     // const optionsElement = document.getElementById("options");
@@ -621,7 +620,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // // Initial question load
     // loadQuestion();
-  
+
     const modeToggle = document.getElementById("mode-toggle");
     modeToggle.addEventListener("change", () => {
       if (modeToggle.checked) {
@@ -664,11 +663,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function attemptQuiz() {
       const quizzesRef = ref(database, "quizzes");
-      // Fetch all quizzes
+      const loadingIndicator = document.getElementById("loading-indicator");
+      const buttonContainer = document.getElementById("button-container");
+
+      loadingIndicator.style.display = "block";
+      buttonContainer.innerHTML = "";
+
       onValue(quizzesRef, (snapshot) => {
         const quizzes = snapshot.val();
-        const buttonContainer = document.getElementById("button-container");
-        buttonContainer.innerHTML = "";
+
+        loadingIndicator.style.display = "none";
+
         if (quizzes) {
           Object.keys(quizzes).forEach((key) => {
             const quiz = quizzes[key];
@@ -677,6 +682,7 @@ document.addEventListener("DOMContentLoaded", function () {
             button.classList.add("btn", "btn-primary");
             buttonContainer.insertBefore(button, buttonContainer.firstChild);
             button.onclick = () => {
+              document.getElementById("showQuizTitle").textContent = quiz.title;
               score = 0;
               localStorage.setItem("score", score);
 
@@ -733,7 +739,7 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("score", score);
       localStorage.setItem("attemptedQuestions", attemptedQuestions);
       localStorage.setItem("timeTaken", timeTaken);
-      window.location.href= ("dashboard.html");
+      window.location.href = "dashboard.html";
     });
     function startTimer() {
       let startTime = Date.now();

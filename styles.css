@@ -162,7 +162,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
-
+#quiz-info p{
+margin-bottom: 0px;
+}
 .attempt-quiz-container{
   max-width: 800px;
   margin: 20px auto;
