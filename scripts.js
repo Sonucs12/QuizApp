@@ -622,26 +622,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // // Initial question load
     // loadQuestion();
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     const modeToggle = document.getElementById("mode-toggle");
     modeToggle.addEventListener("change", () => {
       if (modeToggle.checked) {
