@@ -21,14 +21,16 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
+.create-quiz-container ::placeholder{
+  color: #7c7a7a;
+}
 html {
   scroll-behavior: smooth;
 }
 body {
   background-color: #121212;
   color: #e0e0e0;
-  -webkit-user-select: none !important;
+   -webkit-user-select: none !important;
   -moz-user-select: none !important;
   -ms-user-select: none !important;
   user-select: none !important;
