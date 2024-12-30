@@ -680,7 +680,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const quiz = quizzes[key];
             const button = document.createElement("button");
             button.textContent = quiz.title;
-            button.classList.add("btn", "btn-primary");
+            button.classList.add("btn", "btn-info", "btn-sm");
             buttonContainer.insertBefore(button, buttonContainer.firstChild);
             button.onclick = () => {
               let titleText = quiz.title;
