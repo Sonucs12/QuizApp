@@ -416,7 +416,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (titleInput) {
         document.getElementById("question-title").textContent = titleInput;
         displayQuestions();
-
+        if (titleInput) {
+          document.getElementById("show-question-title").innerHTML = `Create Quiz On ${titleInput} <hr>`;
+        } else {
+          document.getElementById("show-question-title").innerHTML = '';
+        }
         document.getElementById("question-title-input").value = "";
 
         const modalElement = document.getElementById("titleModal");

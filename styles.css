@@ -1,6 +1,6 @@
 .selected {
-  background-color: #5405b3 !important;
-  color: #121212;
+  background-color: green !important;
+  color: white;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -28,6 +28,10 @@ html {
 body {
   background-color: #121212;
   color: #e0e0e0;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
 }
 
 .navbar-nav .nav-link {
@@ -124,9 +128,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   padding: 20px;
 }
-#create-quiz-section h4 {
-  margin: 20px 0px 5px 0px;
-}
+
 .createQuizHeading,
 .createQuizHeadingOne {
   display: flex;
@@ -144,7 +146,7 @@ body {
 .createQuizHeading{
   position: sticky;
   top: 55px;
-  z-index: 1020;
+  z-index: 100;
 }
 .createQuizHeadingOne {
   flex-direction: column;
